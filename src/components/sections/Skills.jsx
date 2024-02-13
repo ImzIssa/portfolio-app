@@ -88,7 +88,7 @@ const Skills = () => {
       <div className="content">
         <p>
           I’ve picked up quite a few skills during the course of my three
-          co-ops, and aim to improve these skills everyday. Here are a few of
+          co-ops, and aim to improve these skills everyday. These are a few of
           the technologies that I have experience with:
         </p>
         <StyledSkillsDiv>

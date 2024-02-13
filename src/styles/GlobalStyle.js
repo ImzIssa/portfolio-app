@@ -5,7 +5,7 @@ import TransitionStyles from "./TransitionStyles";
 // import PrismStyles from './PrismStyles';
 
 const GlobalStyle = createGlobalStyle`
-  ${fonts};
+${fonts};
   ${variables};
 
   html {
@@ -101,7 +101,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0 20px;
       }
       @media (max-width: 480px) {
-        padding: 0 10spx;
+        padding: 0 10px;
       }
     }
   }
@@ -109,8 +109,8 @@ const GlobalStyle = createGlobalStyle`
   section {
     margin: 0;
     padding: 100px 0;
-    max-width: 1000px;
-
+    max-width: 1200px;
+    
     @media (max-width: 768px) {
       padding: 80px 0;
     }
@@ -190,7 +190,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      color: var(--secondaryAccent);
+      color: var(--accent);
     }
 
     &.inline-link {

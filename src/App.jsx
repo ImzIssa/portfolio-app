@@ -21,13 +21,9 @@ const StyledContent = styled.div`
   min-height: 100vh;
 `;
 
-const StyledMainContainer = styled.main`
-  counter-reset: section;
-`;
-
 function App() {
   const isHome = location.pathname === "/";
-  const [isLoading, setIsLoading] = useState(isHome);
+  const [isLoading, _] = useState(isHome);
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {
@@ -67,24 +63,18 @@ function App() {
           <GlobalStyle />
           <StyledContent>
             <Nav isHome={isHome} />
-            {/* <Social isHome={isHome} /> */}
-            {/* <Email isHome={isHome} /> */}
-
-            <div id="content">
-              <StyledMainContainer className="fillHeight">
-                <div>
-                  <Hero />
-                  <About />
-                  <Jobs />
-                  <Projects />
-                  <OtherProjects />
-                  <Skills />
-                  <Contact />
-                  <Footer />
-                </div>
-              </StyledMainContainer>
-              {/* {children} */}
-            </div>
+            <>
+              <main className="fillHeight">
+                <Hero />
+                <About />
+                <Jobs />
+                <Projects />
+                <OtherProjects />
+                <Skills />
+                <Contact />
+                <Footer />
+              </main>
+            </>
           </StyledContent>
         </ThemeProvider>
       </div>

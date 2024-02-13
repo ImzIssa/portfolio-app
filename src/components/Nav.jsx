@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, createRef } from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
@@ -16,7 +17,7 @@ const StyledHeader = styled.header`
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: var(--secondary);
+  background-color: var(--primary);
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -24,7 +25,7 @@ const StyledHeader = styled.header`
   transition: var(--transition);
 
   @media (max-width: 1080px) {
-    padding: 0 40px;
+    padding: 0 50px;
   }
   @media (max-width: 768px) {
     padding: 0 25px;
@@ -37,8 +38,8 @@ const StyledHeader = styled.header`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        background-color: var(--secondary);
-        box-shadow: 0 10px 30px -10px var(--navy-shadow);
+        background-color: var(--dark-accent);
+        box-shadow: 0 10px 30px -15px var(--navy-shadow);
       `};
 
     ${(props) =>
@@ -47,7 +48,7 @@ const StyledHeader = styled.header`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(calc(var(--nav-scroll-height) * -1));
-        box-shadow: 0 10px 30px -10px var(--navy-shadow);
+        box-shadow: 0 10px 30px -15px var(--navy-shadow);
       `};
   }
 `;
@@ -101,6 +102,7 @@ const StyledLinks = styled.div`
     list-style: none;
 
     li {
+      color: var(--light-accent);
       margin: 0 5px;
       position: relative;
       font-size: var(--fz-xs);
@@ -109,12 +111,6 @@ const StyledLinks = styled.div`
         padding: 10px;
       }
     }
-  }
-
-  .resume-button {
-    ${({ theme }) => theme.mixins.smallButton};
-    margin-left: 15px;
-    font-size: var(--fz-xs);
   }
 `;
 
@@ -168,16 +164,6 @@ const Nav = ({ isHome }) => {
     </div>
   );
 
-  const ResumeLink = (
-    <a
-      className="resume-button"
-      href="/resume.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Resume
-    </a>
-  );
   return (
     <StyledHeader
       scrollDirection={scrollDirection}
@@ -197,7 +183,6 @@ const Nav = ({ isHome }) => {
                     </li>
                   ))}
               </ol>
-              <div>{ResumeLink}</div>
             </StyledLinks>
 
             <Menu />
@@ -240,26 +225,6 @@ const Nav = ({ isHome }) => {
                     ))}
                 </TransitionGroup>
               </ol>
-
-              <TransitionGroup component={null}>
-                {isMounted && (
-                  <CSSTransition
-                    classNames={fadeDownClass}
-                    timeout={timeout}
-                    nodeRef={ref}
-                  >
-                    <div
-                      style={{
-                        transitionDelay: `${
-                          isHome ? navLinks.length * 100 : 0
-                        }ms`,
-                      }}
-                    >
-                      {ResumeLink}
-                    </div>
-                  </CSSTransition>
-                )}
-              </TransitionGroup>
             </StyledLinks>
 
             <TransitionGroup component={null}>

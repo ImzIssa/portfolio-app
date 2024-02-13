@@ -52,22 +52,24 @@ const Contact = () => {
     }
 
     sr.reveal(revealContainer.current, srConfig());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <StyledContactSection id="contact" ref={revealContainer}>
-      <h2 className="numbered-heading overline">What’s Next?</h2>
-
-      <h2 className="title">Get In Touch</h2>
+      <h2 className="title">Contact Me</h2>
 
       <p>
-        Although I’m not currently looking for any new opportunities, my inbox
-        is always open. Whether you have a question or just want to say hi, I’ll
-        try my best to get back to you!
+        Are you in need of a dedicated developer to bring your project to life?
+        Skilled in ReactJs for Frontend development, Flutter for mobile
+        development, Laravel and NodeJS for backend and API and Python for web
+        scraping and automation, I am ready to tackle your project
       </p>
 
+      <p>Let's talk</p>
+
       <a className="email-link" href={`mailto:${contact.email}`}>
-        Say Hello
+        Email
       </a>
     </StyledContactSection>
   );

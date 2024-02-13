@@ -11,42 +11,50 @@ const StyledProjectsContent = styled.div`
 `;
 const StyledProject = styled.div`
   max-width: 600px;
-  background-color: var(--secondary);
+  background-color: var(--dark-accent);
   border-radius: var(--border-radius);
   padding: 1rem;
   margin-bottom: 50px;
 
-  .project-header{
+  .project-header {
     ${({ theme }) => theme.mixins.flexBetween};
     margin-bottom: 10px;
 
+    .name {
+      font-size: var(--fz-xl);
+      font-weight: 400px;
+    }
 
-  .project-links {
-    display: flex;
-    align-items: center;
-    color: var(--lightest-slate);
+    .project-links {
+      display: flex;
+      align-items: center;
+      color: var(--light-accent);
 
-    a {
-      ${({ theme }) => theme.mixins.flexCenter};
-      padding: 10px;
+      a {
+        ${({ theme }) => theme.mixins.flexCenter};
+        padding: 10px;
 
-      &.external {
-        svg {
-          width: 22px;
-          height: 22px;
-          margin-top: -4px;
+        &.external {
+          svg {
+            width: 22px;
+            height: 22px;
+            margin-top: -4px;
+          }
         }
-      }
 
-      svg {
-        width: 20px;
-        height: 20px;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
   }
+
   p {
     font-size: 0.9rem;
     margin-bottom: 20px;
+    font-size: var(--fz-lg);
+    color: var(--light-accent);
   }
 
   .used {
@@ -57,8 +65,8 @@ const StyledProject = styled.div`
       font-weight: 700;
       padding: 2px 7px;
       border-radius: 3px;
-      color: var(--dark-accent);
-      border: 1px solid var(--accent);
+      color: var(--accent);
+      border: 1px solid var(--light-accent);
       background: transparent;
 
       &:first-of-type {

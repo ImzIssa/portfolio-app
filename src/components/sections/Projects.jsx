@@ -1,9 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { srConfig } from "../../data/config";
 import { Icon } from "../icons";
 import { usePrefersReducedMotion } from "../../hooks";
-// import Image from "next/image";
 import img from "/qr_light.png";
 // import img from "/mobile.png";
 import { projects } from "../../data/portfolio";
@@ -17,6 +17,7 @@ const StyledProjectsGrid = styled.ul`
     z-index: 1;
   }
 `;
+
 const StyledProject = styled.li`
   position: relative;
   display: grid;
@@ -116,14 +117,6 @@ const StyledProject = styled.li`
     }
   }
 
-  .project-overline {
-    margin: 10px 0;
-    color: var(--dark-accent);
-    font-family: var(--font-mono);
-    font-size: var(--fz-xs);
-    font-weight: 400;
-  }
-
   .project-title {
     color: var(--light-accent);
     font-size: clamp(24px, 5vw, 28px);
@@ -133,8 +126,6 @@ const StyledProject = styled.li`
     }
 
     @media (max-width: 768px) {
-      color: var(--light-accent);
-
       a {
         position: static;
 
@@ -158,15 +149,15 @@ const StyledProject = styled.li`
     z-index: 2;
     padding: 25px;
     border-radius: var(--border-radius);
-    background-color: var(--accent);
-    color: var(--secondary);
+    background-color: var(--dark-accent);
+    color: var(--light-accent);
     font-size: var(--fz-lg);
+    text-align: left;
 
     @media (max-width: 768px) {
       padding: 20px 0;
       background-color: transparent;
       box-shadow: none;
-      color: var(--dark-accent);
 
       &:hover {
         box-shadow: none;
@@ -178,7 +169,7 @@ const StyledProject = styled.li`
     }
 
     strong {
-      color: red; //var(--white);
+      color: var(--white);
       font-weight: normal;
     }
   }
@@ -194,10 +185,13 @@ const StyledProject = styled.li`
 
     li {
       margin: 0 20px 5px 0;
-      color: var(--dark-accent);
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
       white-space: nowrap;
+      padding: 2px 7px;
+      border-radius: 3px;
+      color: var(--accent);
+      border: 1px solid var(--dark-accent);
     }
 
     @media (max-width: 768px) {
@@ -205,7 +199,9 @@ const StyledProject = styled.li`
 
       li {
         margin: 0 10px 5px 0;
-        color: var(--dark-accent);
+        padding: 0;
+        border: none;
+        color: var(--light-accent);
       }
     }
   }
@@ -258,7 +254,6 @@ const StyledProject = styled.li`
     a {
       width: 100%;
       height: 100%;
-      // background-color: var(--secondary);
       border-radius: var(--border-radius);
       vertical-align: middle;
 
@@ -284,24 +279,20 @@ const StyledProject = styled.li`
         right: 0;
         bottom: 0;
         z-index: 3;
-        transition: var(--transition);
-        mix-blend-mode: screen;
-      }
-      @media (max-width: 768px) {
-        background-color: var(--secondary);
       }
     }
 
     .img {
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      // filter: grayscale(100%) contrast(1) brightness(90%);
+      min-height: 300px;
 
       @media (max-width: 768px) {
+        mix-blend-mode: multiply;
+        min-height: 0;
         object-fit: cover;
         width: auto;
         height: 100%;
-        filter: grayscale(100%) contrast(1) brightness(20%);
+        filter: grayscale(100%) contrast(1) brightness(28%);
       }
     }
   }
@@ -327,7 +318,7 @@ const Projects = () => {
   return (
     <section id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Some Things I’ve Built
+        Projects
       </h2>
 
       <StyledProjectsGrid>
@@ -352,8 +343,6 @@ const Projects = () => {
               >
                 <div className="project-content">
                   <div>
-                    <p className="project-overline">Featured Project</p>
-
                     <h3 className="project-title">
                       <a href={livePreview}>{name}</a>
                     </h3>
@@ -374,11 +363,6 @@ const Projects = () => {
                     )}
 
                     <div className="project-links">
-                      {/* {cta && (
-                        <a href={cta} aria-label="Course Link" className="cta">
-                          Learn More
-                        </a>
-                      )} */}
                       {sourceCode && (
                         <a href={sourceCode} aria-label="GitHub Link">
                           <Icon name="GitHub" />

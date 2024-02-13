@@ -13,20 +13,10 @@ const about = {
       name: "Linkedin",
       url: "https://www.linkedin.com/in/imran-issa",
     },
-    // {
-    //   name: "Mail",
-    //   url: "issaimran94@gmail.com",
-    // },
   ],
   description:
     "A developer who is always seeking a challenging position to contribute to the development of innovative and user-centric software solutions",
   greetingEmoji: "👋",
-  aboutMe: `
-  
-Meet me, a Junior Developer who loves creating cool stuff with technology! I've been doing this for 3 years now and just finished my IT degree at university. I know Flutter, ReactJS, Python, and Laravel – some fancy tools for making websites and apps. I'm all about staying updated on what's new in tech, and I love solving problems. Ready to bring my energy and skills to a team and make awesome things happen!
-
-Hey there! I'm a Junior Developer with three years of coding experience and a fresh Bachelor's degree in IT. I'm your go-to person for making things happen using Flutter, ReactJS, Python, and Laravel. I love turning ideas into reality through the magic of coding. Whether it's building sleek apps or crafting interactive websites, I'm all in. Let's connect and create something awesome together!
-`,
 };
 
 const contact = {
@@ -57,9 +47,8 @@ const projects = {
     {
       thumbnail: "images/placeholder-image.jpeg",
       name: "Student Planner",
-      description: [
-        "Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam",
-      ],
+      description:
+        "An Android application for students to set out study plans, manage tasks, order course material such as books, assignments and the related resources. It also helps students with time by sending notifications for class, todo tasks and studying.",
       stack: ["Flutter", "SQLite", "Provider"],
       sourceCode: "https://github.com",
       livePreview: "https://github.com",
@@ -115,7 +104,7 @@ const skills = {
     "Django",
     "ExpressJs",
   ],
-  tools: ["Bash", "Git & Github", "Postman", "MongoDB"],
+  tools: ["Bash", "Linux", "Git & Github", "Postman", "MongoDB"],
   others: ["Linux", "Web Scraping", "Python Web Automation"],
   learning: ["Docker", "ExpressJs"],
 };

@@ -12,7 +12,7 @@ const StyledLogo = styled.div`
 
     &:last-child {
       margin-left: 1px;
-      color: var(--dark-accent);
+      color: var(--light-accent);
     }
   }
 

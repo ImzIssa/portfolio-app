@@ -8,8 +8,6 @@ import sr from "../../utils/sr";
 import { usePrefersReducedMotion } from "../../hooks";
 
 const StyledJobsSection = styled.section`
-  max-width: 900px;
-
   .inner {
     display: flex;
 
@@ -73,10 +71,10 @@ const StyledTabButton = styled.button`
   width: 100%;
   height: var(--tab-height);
   padding: 0 20px 2px;
-  border-left: 2px solid var(--secondary);
+  border-left: 2px solid var(--dark-accent);
   background-color: transparent;
   color: ${({ isActive }) =>
-    isActive ? "var(--dark-accent)" : "var(--accent)"};
+    isActive ? "var(--accent)" : "var(--dark-accent)"};
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
   text-align: left;
@@ -90,14 +88,15 @@ const StyledTabButton = styled.button`
     min-width: 120px;
     padding: 0 15px;
     border-left: 0;
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--dark-accent);
     text-align: center;
-    background-color: ${({ isActive }) => (isActive ? "var(--secondary)" : "")};
+    background-color: ${({ isActive }) =>
+      isActive ? "var(--dark-accent)" : ""};
   }
 
   &:hover,
   &:focus {
-    background-color: var(--secondary);
+    background-color: var(--dark-accent);
   }
 `;
 
@@ -211,7 +210,7 @@ const Jobs = () => {
 
   return (
     <StyledJobsSection id="jobs" ref={revealContainer}>
-      <h2 className="numbered-heading">Work Experience</h2>
+      <h2 className="numbered-heading">Experience</h2>
 
       <div className="inner">
         <StyledTabList

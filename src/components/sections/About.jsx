@@ -1,5 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useRef } from "react";
-// import { StaticImage } from 'gatsby-plugin-image';
 import styled from "styled-components";
 import { srConfig } from "../../data/config";
 import { skills } from "../../data/portfolio";
@@ -8,12 +8,12 @@ import { usePrefersReducedMotion } from "../../hooks";
 import img from "/me.jpg";
 
 const StyledAboutSection = styled.section`
-  max-width: 900px;
-
   .inner {
     display: grid;
+    align-items: center;
+    justify-items: end;
     grid-template-columns: 3fr 2fr;
-    grid-gap: 80px;
+    grid-gap: 0 80px;
 
     @media (max-width: 768px) {
       display: block;
@@ -21,8 +21,10 @@ const StyledAboutSection = styled.section`
   }
 `;
 const StyledText = styled.div`
-  // div {
-  // }
+  div {
+    margin: 0;
+    padding: 0;
+  }
   ul {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -93,6 +95,7 @@ const About = () => {
     }
 
     sr.reveal(revealContainer.current, srConfig());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -109,13 +112,18 @@ const About = () => {
             </p>
 
             <p>
-              My journey to being a self taught programmer started programming
-              and development — late 2020. The first programming language I
-              learnt is Java I'm your go-to person for making things happen
-              using Flutter, ReactJS, Python, and Laravel. I love turning ideas
-              into reality through the magic of coding. Whether it's building
-              sleek apps or crafting interactive websites, I'm all in. Let's
-              connect and create something awesome together!
+              My journey as <strong>self taught programmer</strong> started in
+              <strong>2020</strong>. I started learning how to code by myself in{" "}
+              <strong>Java</strong>
+              first, then moved on to <strong>Python</strong> then{" "}
+              <strong>JavaScript</strong> and recently <strong>Flutter</strong>.
+              Along the way, I learned about lots of other languages, such PHP
+              and C# and tools like Linux trying out different ways of doing
+              things. Its been an exciting journey of exploring and
+              experimenting as I go. I've discovered that with development,
+              there's always something new to learn and discover, and it has
+              become my passion and I'm always excited to tackle new challenges
+              and discover what else I can create.
             </p>
 
             <p>
@@ -138,14 +146,6 @@ const About = () => {
               loading="lazy"
               // width={500}
             />
-            {/* <StaticImage
-              className="img"
-              src="../../images/me.jpg"
-              width={500}
-              quality={95}
-              formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
-            /> */}
           </div>
         </StyledPic>
       </div>

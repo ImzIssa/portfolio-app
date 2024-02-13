@@ -98,8 +98,25 @@ const StyledSidebar = styled.aside`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
-    background-color: var(--secondary);
-    box-shadow: -10px 0px 30px -15px var(--accent);
+    background-color: var(--primary);
+    box-shadow: -15px 0px 20px -15px var(--navy-shadow);
+    z-index: 9;
+    transform: translateX(${(props) => (props.menuOpen ? 0 : 100)}vw);
+    visibility: ${(props) => (props.menuOpen ? "visible" : "hidden")};
+    transition: var(--transition);
+  }
+
+  @media (max-width: 480px) {
+    ${({ theme }) => theme.mixins.flexCenter};
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 50px 10px;
+    width: 100%;
+    height: 100vh;
+    outline: 0;
+    background-color: var(--primary);
     z-index: 9;
     transform: translateX(${(props) => (props.menuOpen ? 0 : 100)}vw);
     visibility: ${(props) => (props.menuOpen ? "visible" : "hidden")};
@@ -110,7 +127,7 @@ const StyledSidebar = styled.aside`
     ${({ theme }) => theme.mixins.flexBetween};
     width: 100%;
     flex-direction: column;
-    color: var(--dark-accent);
+    color: var(--light-accent);
     font-family: var(--font-mono);
     text-align: center;
   }
@@ -124,7 +141,6 @@ const StyledSidebar = styled.aside`
     li {
       position: relative;
       margin: 0 auto 20px;
-      // cursor: pointer;
       font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
 
       @media (max-width: 600px) {

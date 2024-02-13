@@ -46,7 +46,7 @@ const mixins = {
 
     &:hover,
     &:focus-visible {
-      color: var(--secondaryAccent);
+      color: var(--accent);
       outline: 0;
     }
   `,
@@ -54,18 +54,18 @@ const mixins = {
   inlineLink: css`
     display: inline-block;
     position: relative;
-    color: red; //var(--green);
+    color: var(--dark-accent);
     transition: var(--transition);
 
     &:hover,
     &:focus-visible {
-      color: var(--green);
+      color: var(--accent);
       outline: 0;
       &:after {
         width: 100%;
       }
       & > * {
-        color: var(--green) !important;
+        color: var(--accent) !important;
         transition: var(--transition);
       }
     }
@@ -76,7 +76,7 @@ const mixins = {
       height: 1px;
       position: relative;
       bottom: 0.37em;
-      background-color: var(--green);
+      background-color: var(--accent);
       opacity: 0.5;
       @media (prefers-reduced-motion: no-preference) {
         transition: var(--transition);
@@ -115,7 +115,7 @@ const mixins = {
     border: 1px solid var(--accent);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;
-    font-size: var(--fz-sm);
+    font-size: var(--fz-md);
     font-family: var(--font-mono);
     line-height: 1;
     text-decoration: none;

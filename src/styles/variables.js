@@ -2,9 +2,10 @@ import { css } from "styled-components";
 
 const variables = css`
   :root {
-    --primary: #ffffff;
+    // --primary: #ffffff;
+    --primary: #1e2022;
     --secondary: #e5edf1;
-    --secondaryAccent: #96c2db;
+    --secondary-accent: #96c2db;
     --accent: #8fa59f;
     --dark-accent: #414445;
     --light-accent: #808587;

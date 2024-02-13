@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
@@ -7,13 +8,15 @@ import { about } from "../../data/portfolio";
 import Social from "../Social";
 import img from "/me.jpg";
 
+// height: 100vh;
+// align-items: flex-start;
+// flex-direction: column;
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
-  flex-direction: column;
-  align-items: flex-start;
   min-height: 100vh;
-  height: 100vh;
   padding: 0;
+  margin: 0;
+  justify-content: start;
 
   @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
     height: auto;
@@ -23,39 +26,31 @@ const StyledHeroSection = styled.section`
   .inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-gap: 50px;
+    grid-gap: 80px;
+    // justify-items: end;
 
     @media (max-width: 768px) {
       display: block;
     }
 
-
-  h1 {
-    margin: 0 0 30px 4px;
-    color: var(--dark-accent);
-    font-family: var(--font-mono);
-    font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
-    font-weight: 400;
-
-    @media (max-width: 480px) {
-      margin: 0 0 20px 2px;
+    h1 {
+      margin-left: 4px;
+      color: var(--light-accent);
+      font-family: var(--font-mono);
+      font-size: clamp(var(--fz-lg), 5vw, var(--fz-xl));
+      font-weight: 400;
     }
-  }
 
-  h3 {
-    margin-top: 5px;
-    color: var(--light-accent);
-    line-height: 0.9;
-  }
+    p {
+      margin: 10px 0 0;
+      max-width: 540px;
+      color: var(--light-accent);
+    }
 
-  p {
-    margin: 20px 0 0;
-    max-width: 540px;
-  }
-
-  .email-link {
-    ${({ theme }) => theme.mixins.bigButton};
-    margin-top: 40px;
+    .resume-link {
+      ${({ theme }) => theme.mixins.bigButton};
+      margin-top: 40px;
+    }
   }
 `;
 
@@ -73,60 +68,18 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--accent);
 
-    &:hover,
-    &:focus {
-      outline: 0;
-      transform: translate(-4px, -4px);
-
-      &:after {
-        transform: translate(8px, 8px);
-      }
-
-      .img {
-        filter: none;
-        mix-blend-mode: normal;
-      }
     }
 
     .img {
       position: relative;
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
-      transition: var(--transition);
-    }
-
-    &:before,
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: var(--border-radius);
-      transition: var(--transition);
-    }
-
-    &:before {
-      top: 0;
-      left: 0;
-      background-color: var(--primary);
-      mix-blend-mode: screen;
-    }
-
-    &:after {
-      border: 2px solid var(--accent);
-      top: 14px;
-      left: 14px;
-      z-index: -1;
     }
   }
 `;
 
 const Hero = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(true);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
@@ -147,12 +100,12 @@ const Hero = () => {
   );
   const four = (
     <a
-      className="email-link"
+      className="resume-link"
       href="https://www.newline.co/courses/build-a-spotify-connected-app"
       target="_blank"
       rel="noreferrer"
     >
-      Check out my course!
+      Resume
     </a>
   );
   const five = <Social />;
