@@ -13,7 +13,7 @@ const StyledAboutSection = styled.section`
   .inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-gap: 100px;
+    grid-gap: 80px;
 
     @media (max-width: 768px) {
       display: block;
@@ -21,19 +21,20 @@ const StyledAboutSection = styled.section`
   }
 `;
 const StyledText = styled.div`
-  ul.skills-list {
+  // div {
+  // }
+  ul {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
-    grid-gap: 0 10px;
+    grid-gap: 10px 40px;
     padding: 0;
-    margin: 20px 0 0 0;
+    margin-top: 20px;
     overflow: hidden;
     list-style: none;
 
     li {
       position: relative;
-      margin-bottom: 10px;
-      padding-left: 20px;
+      padding-left: 15px;
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
 
@@ -44,6 +45,7 @@ const StyledText = styled.div`
         color: var(--accent);
         font-size: var(--fz-sm);
         line-height: 12px;
+        padding-top: 2px;
       }
     }
   }
@@ -63,54 +65,20 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--accent);
 
     &:hover,
     &:focus {
       outline: 0;
-      transform: translate(-4px, -4px);
+      transform: translate(4px, -4px);
 
       &:after {
         transform: translate(8px, 8px);
-      }
-
-      .img {
-        filter: none;
-        mix-blend-mode: normal;
       }
     }
 
     .img {
       position: relative;
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
-      transition: var(--transition);
-    }
-
-    &:before,
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: var(--border-radius);
-      transition: var(--transition);
-    }
-
-    &:before {
-      top: 0;
-      left: 0;
-      background-color: var(--primary);
-      mix-blend-mode: screen;
-    }
-
-    &:after {
-      border: 2px solid var(--accent);
-      top: 14px;
-      left: 14px;
-      z-index: -1;
     }
   }
 `;
@@ -154,11 +122,8 @@ const About = () => {
               To expand my skillset, lately I’ve been learning the following
               technologies :
             </p>
-
-            {/* <p>Here are a few technologies I’ve been working with recently:</p> */}
           </div>
-
-          <ul className="skills-list">
+          <ul>
             {skills.learning &&
               skills.learning.map((skill, i) => <li key={i}>{skill}</li>)}
           </ul>
@@ -171,7 +136,7 @@ const About = () => {
               alt="<NAME>"
               className="img"
               loading="lazy"
-              width={500}
+              // width={500}
             />
             {/* <StaticImage
               className="img"
