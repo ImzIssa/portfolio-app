@@ -1,0 +1,8 @@
+#ffffff - background/primary
+#96c2db - primary
+#e5edf1 - secondary
+#ffffff - background
+#414445 -  main text
+#808587 - gray(text)
+
+#8fa59f - gray dark teal

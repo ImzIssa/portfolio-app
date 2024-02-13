@@ -1,0 +1,16 @@
+// export { default as Head } from './head';
+// export { default as Layout } from './layout';
+// export { default as Loader } from './loader';
+export { default as Nav } from "./Nav";
+export { default as Menu } from "./Menu";
+// export { default as Side } from './side';
+// export { default as Social } from './social';
+// export { default as Email } from './email';
+export { default as Footer } from "./Footer";
+export { default as Hero } from "./sections/Hero";
+export { default as About } from "./sections/About";
+export { default as Jobs } from "./sections/Jobs";
+export { default as Projects } from "./sections/Projects";
+export { default as OtherProjects } from "./sections/OtherProjects";
+export { default as Skills } from "./sections/Skills";
+export { default as Contact } from "./sections/Contact";
