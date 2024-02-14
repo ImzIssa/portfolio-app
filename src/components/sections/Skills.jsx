@@ -53,6 +53,9 @@ const StyledSkillsDiv = styled.div`
 
     ul {
       ${({ theme }) => theme.mixins.fancyList};
+      li {
+        color: var(--light-accent);
+      }
     }
 
     @media (max-width: 768px) {
@@ -68,7 +71,6 @@ const StyledSkillsDiv = styled.div`
       
       .label {
         font-weight: 700;
-        color: $black;
         text-transform: uppercase;
       }
 
@@ -87,9 +89,8 @@ const Skills = () => {
       <h2 className="numbered-heading">Skills</h2>
       <div className="content">
         <p>
-          I’ve picked up quite a few skills during the course of my three
-          co-ops, and aim to improve these skills everyday. These are a few of
-          the technologies that I have experience with:
+          Here are a few of the technologies I've learnt over the last years and
+          I have experience with:
         </p>
         <StyledSkillsDiv>
           <div className="category">

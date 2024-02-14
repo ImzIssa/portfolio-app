@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { navLinks } from "../data/config";
 import { KEY_CODES } from "../utils";
 import { useOnClickOutside } from "../hooks";
+import Social from "./Social";
 
 const StyledMenu = styled.div`
   display: none;
@@ -278,7 +279,7 @@ const Menu = () => {
                 ))}
               </ol>
             )}
-
+            <Social />
             <a href="/resume.pdf" className="resume-link">
               Resume
             </a>

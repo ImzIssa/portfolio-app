@@ -116,7 +116,7 @@ const StyledProject = styled.li`
   }
 
   .project-title {
-    color: var(--light-accent);
+    color: var(--accent);
     font-size: clamp(24px, 5vw, 28px);
 
     @media (min-width: 768px) {
@@ -147,7 +147,7 @@ const StyledProject = styled.li`
     z-index: 2;
     padding: 25px;
     border-radius: var(--border-radius);
-    background-color: var(--dark-accent);
+    background-color: var(--secondary);
     color: var(--light-accent);
     font-size: var(--fz-lg);
     text-align: left;
@@ -188,8 +188,8 @@ const StyledProject = styled.li`
       white-space: nowrap;
       padding: 2px 7px;
       border-radius: 3px;
-      color: var(--accent);
-      border: 1px solid var(--dark-accent);
+      color: var(--light-accent);
+      border: 1px solid var(--accent);
     }
 
     @media (max-width: 768px) {

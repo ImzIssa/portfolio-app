@@ -6,7 +6,7 @@ import { navDelay, loaderDelay } from "../../utils";
 import { usePrefersReducedMotion } from "../../hooks";
 import { about } from "../../data/portfolio";
 import Social from "../Social";
-import img from "/me.jpg";
+import img from "/illustration.svg";
 
 // height: 100vh;
 // align-items: flex-start;
@@ -56,25 +56,11 @@ const StyledHeroSection = styled.section`
 
 const StyledPic = styled.div`
   position: relative;
-  max-width: 300px;
+  max-width: 480px;
+  // color: red;
 
   @media (max-width: 768px) {
     display: none;
-  }
-
-  .wrapper {
-    ${({ theme }) => theme.mixins.boxShadow};
-    display: block;
-    position: relative;
-    width: 100%;
-    border-radius: var(--border-radius);
-
-    }
-
-    .img {
-      position: relative;
-      border-radius: var(--border-radius);
-    }
   }
 `;
 
@@ -152,15 +138,7 @@ const Hero = () => {
                 ))}
               </div>
               <StyledPic>
-                <div className="wrapper">
-                  <img
-                    src={img}
-                    alt="<NAME>"
-                    className="img"
-                    loading="lazy"
-                    width={500}
-                  />
-                </div>
+                <img src={img} alt="illustration" loading="lazy" width={500} />
               </StyledPic>
             </div>
           )}

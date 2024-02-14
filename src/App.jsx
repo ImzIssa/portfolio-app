@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-// import reactLogo from "./assets/react.svg";
 import { GlobalStyle, theme } from "./styles";
 import {
   Nav,
@@ -13,7 +12,6 @@ import {
   Skills,
   Contact,
 } from "./components";
-// import viteLogo from "/vite.svg";
 
 const StyledContent = styled.div`
   display: flex;

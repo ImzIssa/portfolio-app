@@ -38,7 +38,7 @@ const StyledHeader = styled.header`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        background-color: var(--dark-accent);
+        background-color: var(--secondary);
         box-shadow: 0 10px 30px -15px var(--navy-shadow);
       `};
 

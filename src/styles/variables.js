@@ -1,26 +1,19 @@
 import { css } from "styled-components";
 
+//seconday  #202224; // #2a2c2e; //#424f4b; // #414445;
 const variables = css`
   :root {
-    // --primary: #ffffff;
     --primary: #1e2022;
-    --secondary: #e5edf1;
-    --secondary-accent: #96c2db;
+    --secondary: #282b2e;
     --accent: #8fa59f;
-    --dark-accent: #414445;
-    --light-accent: #808587;
+    --light-accent: #a4bdb6;
 
-    --dark-navy: #020c1b;
-    --navy: #0a192f;
-    --light-navy: #112240;
-    --lightest-navy: #233554;
     --navy-shadow: rgba(2, 12, 27, 0.7);
     --dark-slate: #495670;
     --slate: #8892b0;
     --light-slate: #a8b2d1;
     --lightest-slate: #ccd6f6;
-    --white: #e6f1ff;
-    --green: #64ffda;
+    --white: #f1f1f1;
 
     --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text",
       -apple-system, system-ui, sans-serif;

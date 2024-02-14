@@ -71,10 +71,10 @@ const StyledTabButton = styled.button`
   width: 100%;
   height: var(--tab-height);
   padding: 0 20px 2px;
-  border-left: 2px solid var(--dark-accent);
+  border-left: 2px solid var(--secondary);
   background-color: transparent;
   color: ${({ isActive }) =>
-    isActive ? "var(--accent)" : "var(--dark-accent)"};
+    isActive ? "var(--light-accent)" : "var(--accent)"};
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
   text-align: left;
@@ -88,15 +88,14 @@ const StyledTabButton = styled.button`
     min-width: 120px;
     padding: 0 15px;
     border-left: 0;
-    border-bottom: 2px solid var(--dark-accent);
+    border-bottom: 2px solid var(--secondary);
     text-align: center;
-    background-color: ${({ isActive }) =>
-      isActive ? "var(--dark-accent)" : ""};
+    background-color: ${({ isActive }) => (isActive ? "var(--secondary)" : "")};
   }
 
   &:hover,
   &:focus {
-    background-color: var(--dark-accent);
+    background-color: var(--secondary);
   }
 `;
 
@@ -133,6 +132,10 @@ const StyledTabPanel = styled.div`
 
   ul {
     ${({ theme }) => theme.mixins.fancyList};
+
+    li {
+      color: var(--light-accent);
+    }
   }
 
   h3 {

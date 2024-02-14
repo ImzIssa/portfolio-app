@@ -1,11 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-import fonts from "./fonts";
 import variables from "./variables";
 import TransitionStyles from "./TransitionStyles";
-// import PrismStyles from './PrismStyles';
 
 const GlobalStyle = createGlobalStyle`
-${fonts};
   ${variables};
 
   html {
@@ -204,7 +201,7 @@ ${fonts};
     border-radius: 0;
   }
 
-  /*
+  
   input, textarea {
     border-radius: 0;
     outline: 0;
@@ -255,12 +252,12 @@ ${fonts};
           content: '⁕';
           position: absolute;
           left: 0;
-          color: var(--green);
+          color: var(--accent);
         }
       }
     }
   }
-
+  /*
   
   blockquote {
     border-left-color: var(--green);
@@ -368,9 +365,7 @@ ${fonts};
     }
   }
 
-  .gatsby-image-outer-wrapper {
-    height: 100%;
-  }
+  
   */
 
   ${TransitionStyles};

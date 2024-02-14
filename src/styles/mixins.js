@@ -54,7 +54,7 @@ const mixins = {
   inlineLink: css`
     display: inline-block;
     position: relative;
-    color: var(--dark-accent);
+    color: var(--secondary);
     transition: var(--transition);
 
     &:hover,
@@ -155,7 +155,7 @@ const mixins = {
         content: "⁕"; //▹
         position: absolute;
         left: 0;
-        color: var(--dark-accent);
+        color: var(--accent);
       }
     }
   `,

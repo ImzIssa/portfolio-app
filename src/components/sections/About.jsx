@@ -21,6 +21,7 @@ const StyledAboutSection = styled.section`
   }
 `;
 const StyledText = styled.div`
+  color: var(--light-accent);
   div {
     margin: 0;
     padding: 0;

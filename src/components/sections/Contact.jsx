@@ -41,6 +41,7 @@ const StyledContactSection = styled.section`
 
     &:last-of-type {
       color: var(--accent);
+      font-weight: 500;
     }
   }
 

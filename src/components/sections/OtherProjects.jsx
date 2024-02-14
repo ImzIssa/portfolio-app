@@ -11,7 +11,7 @@ const StyledProjectsContent = styled.div`
 `;
 const StyledProject = styled.div`
   max-width: 600px;
-  background-color: var(--dark-accent);
+  background-color: var(--secondary);
   border-radius: var(--border-radius);
   padding: 1rem;
   margin-bottom: 50px;
@@ -65,8 +65,8 @@ const StyledProject = styled.div`
       font-weight: 700;
       padding: 2px 7px;
       border-radius: 3px;
-      color: var(--accent);
-      border: 1px solid var(--light-accent);
+      color: var(--light-accent);
+      border: 1px solid var(--accent);
       background: transparent;
 
       &:first-of-type {
