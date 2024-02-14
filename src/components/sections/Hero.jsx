@@ -87,9 +87,9 @@ const Hero = () => {
   const four = (
     <a
       className="resume-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
+      href="/resume.pdf"
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
     >
       Resume
     </a>
