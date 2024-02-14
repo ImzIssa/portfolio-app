@@ -4,8 +4,6 @@ import styled from "styled-components";
 import { srConfig } from "../../data/config";
 import { Icon } from "../icons";
 import { usePrefersReducedMotion } from "../../hooks";
-import img from "/qr_light.png";
-// import img from "/mobile.png";
 import { projects } from "../../data/portfolio";
 import sr from "../../utils/sr";
 
@@ -283,8 +281,9 @@ const StyledProject = styled.li`
     }
 
     .img {
+      object-fit: contain;
+      mix-blend-mode: color-burn;
       border-radius: var(--border-radius);
-      min-height: 300px;
 
       @media (max-width: 768px) {
         mix-blend-mode: multiply;
@@ -324,17 +323,15 @@ const Projects = () => {
       <StyledProjectsGrid>
         {featuredProjects &&
           featuredProjects.map((project, i) => {
-            // console.log(project);
-
             const {
               thumbnail,
+              imgFile,
               name,
               stack,
               sourceCode,
               livePreview,
               description,
             } = project;
-            // const image = getImage(cover);
 
             return (
               <StyledProject
@@ -380,7 +377,7 @@ const Projects = () => {
                 <div className="project-image">
                   {/* <a href={external ? external : github ? github : "#"}> */}
                   <a href="#">
-                    <img src={img} alt={name} className="img" />
+                    <img src={imgFile} alt={name} className="img" />
                   </a>
                 </div>
               </StyledProject>

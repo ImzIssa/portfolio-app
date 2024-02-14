@@ -1,3 +1,9 @@
+import CropDocImg from "../assets/CropDoc.jpg";
+import ProjectsHubMobileImg from "../assets/ProjectsHubMobile.png";
+import ProjectsHubWebImg from "../assets/ProjectsHubWeb.png";
+import QrCodeImg from "../assets/QRCode.jpg";
+import StudentPlannerImg from "../assets/StudentPlanner.jpg";
+
 const about = {
   name: "Imran Issa",
   role: "Junior Software Developer",
@@ -27,49 +33,54 @@ const contact = {
 const projects = {
   main: [
     {
-      thumbnail: "images/placeholder-image.jpeg",
+      thumbnail: "assets/QRCode.jpeg",
+      imgFile: QrCodeImg,
       name: "QrCode Attendance",
       description:
         "A System that allows students to register for classes using a qrcode and allows lecturers to manage course registration and attendance. Additionally it allows the Head of Department to monitor the attendance of students, course attendance and lecturers' course attendance state.",
       stack: ["Laravel", "Livewire", "Tailwind", "MySQL"],
-      sourceCode: "https://github.com",
-      livePreview: "https://github.com",
+      // sourceCode: "https://github.com",
+      // livePreview: "https://github.com",
     },
     {
-      thumbnail: "images/placeholder-image.jpeg",
+      thumbnail: "assets/CropDoc.jpeg",
+      imgFile: CropDocImg,
       name: "CropDoc",
       description:
         "An android application that uses machine learning and computer vision to detect crop diseases from captured crop images. The app works on Maize, Tomato and Cabbage and is able to detect diseases such as blight, black rot and maize rust.",
       stack: ["Flutter", "Tensorflow Lite", "Riverpod", "Firebase"],
-      sourceCode: "https://github.com",
-      livePreview: "https://github.com",
+      // sourceCode: "https://github.com",
+      // livePreview: "https://github.com",
     },
     {
-      thumbnail: "images/placeholder-image.jpeg",
+      thumbnail: "assets/StudentPlanner.jpeg",
+      imgFile: StudentPlannerImg,
       name: "Student Planner",
       description:
         "An Android application for students to set out study plans, manage tasks, order course material such as books, assignments and the related resources. It also helps students with time by sending notifications for class, todo tasks and studying.",
       stack: ["Flutter", "SQLite", "Provider"],
-      sourceCode: "https://github.com",
-      livePreview: "https://github.com",
+      // sourceCode: "https://github.com",
+      // livePreview: "https://github.com",
     },
     {
-      thumbnail: "images/placeholder-image.jpeg",
+      thumbnail: "assets/ProjectsHubMobile.jpeg",
+      imgFile: ProjectsHubMobileImg,
       name: "Projects Hub",
       description:
-        "An Android application for students at the University of Lusaka to access Completed Final Year Projects",
+        "An Android application for students at the University of Lusaka to access completed Final Year Projects",
       stack: ["Flutter", "Firebase", "Provider"],
-      sourceCode: "https://github.com",
-      livePreview: "https://github.com",
+      // sourceCode: "https://github.com",
+      // livePreview: "https://github.com",
     },
     {
-      thumbnail: "images/placeholder-image.jpeg",
+      thumbnail: "assets/ProjectsHubWeb.jpeg",
+      imgFile: ProjectsHubWebImg,
       name: "Projects Hub Admin",
       description:
         "An React CMS application for administration at the University of Lusaka to add and manage final year projects for students.",
       stack: ["ReactJs", "Firebase", "Tailwind"],
-      sourceCode: "https://github.com",
-      livePreview: "https://github.com",
+      // sourceCode: "https://github.com",
+      // livePreview: "https://github.com",
     },
   ],
   others: [

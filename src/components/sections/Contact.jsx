@@ -36,6 +36,14 @@ const StyledContactSection = styled.section`
     font-size: clamp(40px, 5vw, 60px);
   }
 
+  p {
+    color: var(--light-accent);
+
+    &:last-of-type {
+      color: var(--accent);
+    }
+  }
+
   .email-link {
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
