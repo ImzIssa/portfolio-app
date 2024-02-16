@@ -21,7 +21,7 @@ const StyledContent = styled.div`
 
 function App() {
   const isHome = location.pathname === "/";
-  const [isLoading, _] = useState(isHome);
+  const [isLoading, setIsLoading] = useState(isHome);
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {
